@@ -1,4 +1,4 @@
-name: Release
+name: Release 0.01
 
 on:
   push:
@@ -19,7 +19,7 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: 18
+          node-version: 19
 
       - uses: pnpm/action-setup@v2
         with:
@@ -34,4 +34,5 @@ jobs:
       - uses: ncipollo/release-action@v1
         with:
           artifacts: "bundle/*"
-          makeLatest: true
+          makeLatest: false
+          
